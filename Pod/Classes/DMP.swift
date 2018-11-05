@@ -275,7 +275,7 @@ open class DMP:NSObject{
     /**
     Sends the collected behavior data to the Lotame server without a completion handler
     */
-    open class func sendBehaviorData(){
+    @objc open class func sendBehaviorData(){
         sendBehaviorData(){
             err in
             //Could log the message here
@@ -285,7 +285,7 @@ open class DMP:NSObject{
     /**
     Collects behavior data with any type and value
     */
-    open class func addBehaviorData(_ value: String?, forType key: String){
+    @objc open class func addBehaviorData(_ value: String?, forType key: String){
         if !key.isEmpty{
             dispatchQueue.async{
                 if DMP.trackingEnabled{
